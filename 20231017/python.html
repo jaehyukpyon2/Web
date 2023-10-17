@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let A = function(I, P) {
+            let B = function() {
+                console.log(I);
+            }
+            if (I > 1) {
+                P();
+            } else {
+                A(2, B);
+            }
+        }
+        let C = function() {
+            console.log("C");
+        }
+        A(1, C);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

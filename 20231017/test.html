@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let u = 42; 
+        let v = 69;
+        let w = 17;
+        let add = function(z) {// z=69
+            u = v + u + z //  + 42 + 69
+        }
+
+        let bar = function(fun) { //func: add
+            let u = w; // 아직 add를 호출 안 했고, static scope이기에, 전역 w를 참조한다. u=17
+            fun(v) // add() 69
+        }
+        let foo = function(x, w) { // x=42, w=13
+            let v = x; //v=42
+            bar(add)
+        }
+        let main = function() {
+            foo(u, 13) // u=42
+            console.log(u);
+        }
+
+        main();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
