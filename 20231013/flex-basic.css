@@ -1,0 +1,18 @@
+.flex-container {
+    width: 600px;
+    height: 200px;
+    background-color: #c4c4c4;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    color: white;
+    background-color: #ff5252;
+    margin: 10px;
+}
+.flex-item:nth-child(2n) {
+    background-color: #bf5e5e;
+}
