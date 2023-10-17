@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #grand-parent {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: yellow;
+            /* #grand-parent는 원래의 block요소처럼 한 줄을 완전히 차지하게 되는 게 아닌, 자식 요소의 크기만큼 inline 형식처럼 공간을 차지한다. 
+                #parent 영역도 마찬가지로 완전히 한 줄을 차지하지 않고 text 크기만큼만 차지한다.
+            */
+            width: 700px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        #parent {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 1px solid black;
+        }
+        #child {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border-radius: 50% solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="grand-parent"> 
+        <div id="parent">
+            <div id="child">asdff</div>
+        </div>
+    </div>
+    <!-- <h1>여기 이 태그는 #grand-parent를 무시하고 자리를 잡는다. 즉  #grand-parent는 공간을 차지하지 않는 것처럼 된다.</h1> -->
+</body>
+</html>
